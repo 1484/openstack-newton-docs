@@ -755,13 +755,22 @@ controller# rm /var/lib/keystone/keystone.db
 + 環境変数の設定
 
 ```
-$ export OS_USERNAME=admin
-$ export OS_PASSWORD=password
-$ export OS_PROJECT_NAME=admin
-$ export OS_USER_DOMAIN_NAME=Default
-$ export OS_PROJECT_DOMAIN_NAME=Default
-$ export OS_AUTH_URL=http://controller:35357/v3
-$ export OS_IDENTITY_API_VERSION=3
+$ . admin-openrc
+...
+
+設定の内容はenvコマンドで確認します。
+
+...
+$ env | grep OS_
+OS_USER_DOMAIN_NAME=default
+OS_IMAGE_API_VERSION=2
+OS_PROJECT_NAME=admin
+OS_IDENTITY_API_VERSION=3
+OS_PASSWORD=password
+OS_AUTH_URL=http://controller:35357/v3
+OS_USERNAME=admin
+OS_PROJECT_DOMAIN_NAME=default
+$ 
 ```
 
 + サービスの作成
