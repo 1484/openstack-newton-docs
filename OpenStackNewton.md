@@ -756,11 +756,11 @@ controller# rm /var/lib/keystone/keystone.db
 
 ```
 $ . admin-openrc
-...
+```
 
 設定の内容はenvコマンドで確認します。
 
-...
+```
 $ env | grep OS_
 OS_USER_DOMAIN_NAME=default
 OS_IMAGE_API_VERSION=2
